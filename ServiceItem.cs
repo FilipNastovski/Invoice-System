@@ -53,9 +53,15 @@ namespace Invoice_System
             this.TotalPrice += LaborCost;
         }
 
-        public override string? ToString()
+        public override string ToString()
         {
-            return Description + ", " + MeasurementUnit + ", " + Quantity + ", " + PricePerUnit + ", " + TotalPrice;
+            return $"Опис: {Description}\t" +
+                   $"ЕМ: {MeasurementUnit}\t" +
+                   $"Кол: {Quantity}\t" +
+                   $"Цена парче: {PricePerUnit:C}\t" +
+                   $"Вкупно: {TotalPrice:C}\t" +
+                   $"Рабат: {LaborCost:C}\t" +
+                   $"Данок: {Tax}\t";
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)

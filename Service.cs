@@ -14,7 +14,14 @@ namespace Invoice_System
     {
         public DateOnly DateOfService;
 
-        public decimal serviceTotalPrice;
+        public decimal serviceTotalPrice { get; set; }
+
+        public decimal getTotalPrice()
+        {
+            this.calculateTotalPrice();
+            return this.serviceTotalPrice;
+        }
+
 
         public List<ServiceItem> ServiceItems { get; set; }
 
@@ -33,7 +40,7 @@ namespace Invoice_System
 
         public override string? ToString()
         {
-            return "Service date = " + DateOfService;
+            return "Датум на сервис: " + DateOfService + "      Цена  " + serviceTotalPrice;
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)

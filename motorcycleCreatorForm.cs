@@ -41,5 +41,10 @@ namespace Invoice_System
             newMotorcycle = new Motorcycle(motorcycleModelTB.Text, Convert.ToInt32(motorcycleYearNud.Value), Convert.ToInt32(motorcycleKmNud.Value));
             this.DialogResult = DialogResult.OK;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
     }
 }

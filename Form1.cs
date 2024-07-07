@@ -5,6 +5,7 @@ namespace Invoice_System
     public partial class Form1 : Form
     {
         public List<Customer> customerList = new List<Customer>();
+        public List<Invoice> invoiceList = new List<Invoice>();
         public Form1()
         {
             InitializeComponent();
@@ -30,11 +31,17 @@ namespace Invoice_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadForm(new serviceForm());
+            serviceFormBtn.BackColor = Color.FromArgb(25, 20, 45);
+            clientsFormBtn.BackColor = Color.FromArgb(29, 35, 59);
+            invoiceFormBtn.BackColor = Color.FromArgb(29, 35, 59);
+            loadForm(new serviceForm(customerList));
         }
 
         private void clientsFormBtn_Click(object sender, EventArgs e)
         {
+            clientsFormBtn.BackColor = Color.FromArgb(25, 20, 45);
+            serviceFormBtn.BackColor = Color.FromArgb(29, 35, 59);
+            invoiceFormBtn.BackColor = Color.FromArgb(29, 35, 59);
             loadForm(new clientForm(customerList));
         }
 
@@ -62,6 +69,19 @@ namespace Invoice_System
 #pragma warning restore SYSLIB0011 // Type or member is obsolete
             bf.Serialize(stream, customerList);
             stream.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            invoiceFormBtn.BackColor = Color.FromArgb(25, 20, 45);
+            clientsFormBtn.BackColor = Color.FromArgb(29, 35, 59);
+            serviceFormBtn.BackColor = Color.FromArgb(29, 35, 59);
+            loadForm(new invoiceForm());
         }
     }
 }

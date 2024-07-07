@@ -212,5 +212,45 @@ namespace Invoice_System
         {
             reloadServiceList();
         }
+
+        private void searchClientTB_TextChanged(object sender, EventArgs e)
+        {
+
+            if (searchClientTB.Text != null && searchClientTB.Text.Length == 0)
+            {
+                reloadCustomerList();
+            }
+            else
+            {
+                List<Customer> filteredCustomers = new List<Customer>();
+                string name = searchClientTB.Text;
+
+                foreach (Customer customer in customerList)
+                {
+                    if (customer.Name.StartsWith(name))
+                    {
+                        filteredCustomers.Add(customer);
+                    }
+                }
+
+                BindingSource filteredClientsBindingSource = new BindingSource();
+                filteredClientsBindingSource.DataSource = filteredCustomers;
+                clientsListLB.DataSource = filteredClientsBindingSource;
+                reloadMotorcycleList();
+            }
+
+
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Service selectedService = serviceListLb.SelectedItem as Service;
+            if (selectedService != null)
+            {
+                printLayoutForm printLayoutForm = new printLayoutForm(selectedService);
+                printLayoutForm.ShowDialog();
+            }
+        }
     }
 }

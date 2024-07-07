@@ -41,6 +41,7 @@
             newServiceBtn = new Button();
             deleteServiceBtn = new Button();
             button10 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // searchClientTB
@@ -50,6 +51,7 @@
             searchClientTB.PlaceholderText = "Пребарај Клиент";
             searchClientTB.Size = new Size(294, 27);
             searchClientTB.TabIndex = 0;
+            searchClientTB.TextChanged += searchClientTB_TextChanged;
             // 
             // clientsListLB
             // 
@@ -74,7 +76,7 @@
             // 
             changeClientBtn.Location = new Point(195, 492);
             changeClientBtn.Name = "changeClientBtn";
-            changeClientBtn.Size = new Size(94, 29);
+            changeClientBtn.Size = new Size(94, 55);
             changeClientBtn.TabIndex = 3;
             changeClientBtn.Text = "Измени";
             changeClientBtn.UseVisualStyleBackColor = true;
@@ -84,7 +86,7 @@
             // 
             deleteClientBtn.Location = new Point(296, 492);
             deleteClientBtn.Name = "deleteClientBtn";
-            deleteClientBtn.Size = new Size(94, 29);
+            deleteClientBtn.Size = new Size(94, 55);
             deleteClientBtn.TabIndex = 4;
             deleteClientBtn.Text = "Избриши";
             deleteClientBtn.UseVisualStyleBackColor = true;
@@ -101,9 +103,9 @@
             // 
             // newMotoBtn
             // 
-            newMotoBtn.Location = new Point(514, 291);
+            newMotoBtn.Location = new Point(514, 279);
             newMotoBtn.Name = "newMotoBtn";
-            newMotoBtn.Size = new Size(94, 29);
+            newMotoBtn.Size = new Size(94, 53);
             newMotoBtn.TabIndex = 6;
             newMotoBtn.Text = "Нов Мотор";
             newMotoBtn.UseVisualStyleBackColor = true;
@@ -111,9 +113,9 @@
             // 
             // changeMotoBtn
             // 
-            changeMotoBtn.Location = new Point(614, 291);
+            changeMotoBtn.Location = new Point(614, 279);
             changeMotoBtn.Name = "changeMotoBtn";
-            changeMotoBtn.Size = new Size(94, 29);
+            changeMotoBtn.Size = new Size(94, 53);
             changeMotoBtn.TabIndex = 7;
             changeMotoBtn.Text = "Измени";
             changeMotoBtn.UseVisualStyleBackColor = true;
@@ -121,9 +123,9 @@
             // 
             // deleteMotoBtn
             // 
-            deleteMotoBtn.Location = new Point(725, 291);
+            deleteMotoBtn.Location = new Point(725, 279);
             deleteMotoBtn.Name = "deleteMotoBtn";
-            deleteMotoBtn.Size = new Size(94, 29);
+            deleteMotoBtn.Size = new Size(94, 53);
             deleteMotoBtn.TabIndex = 8;
             deleteMotoBtn.Text = "Избриши";
             deleteMotoBtn.UseVisualStyleBackColor = true;
@@ -132,16 +134,16 @@
             // serviceListLb
             // 
             serviceListLb.FormattingEnabled = true;
-            serviceListLb.Location = new Point(514, 380);
+            serviceListLb.Location = new Point(514, 359);
             serviceListLb.Name = "serviceListLb";
             serviceListLb.Size = new Size(289, 104);
             serviceListLb.TabIndex = 9;
             // 
             // newServiceBtn
             // 
-            newServiceBtn.Location = new Point(514, 507);
+            newServiceBtn.Location = new Point(514, 479);
             newServiceBtn.Name = "newServiceBtn";
-            newServiceBtn.Size = new Size(94, 29);
+            newServiceBtn.Size = new Size(132, 29);
             newServiceBtn.TabIndex = 10;
             newServiceBtn.Text = "Нов Сервис";
             newServiceBtn.UseVisualStyleBackColor = true;
@@ -149,9 +151,9 @@
             // 
             // deleteServiceBtn
             // 
-            deleteServiceBtn.Location = new Point(714, 507);
+            deleteServiceBtn.Location = new Point(676, 479);
             deleteServiceBtn.Name = "deleteServiceBtn";
-            deleteServiceBtn.Size = new Size(94, 29);
+            deleteServiceBtn.Size = new Size(127, 29);
             deleteServiceBtn.TabIndex = 12;
             deleteServiceBtn.Text = "Избриши";
             deleteServiceBtn.UseVisualStyleBackColor = true;
@@ -159,18 +161,31 @@
             // 
             // button10
             // 
-            button10.Location = new Point(514, 579);
+            button10.Location = new Point(514, 518);
             button10.Name = "button10";
             button10.Size = new Size(289, 29);
             button10.TabIndex = 13;
             button10.Text = "Печати Сервис";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F);
+            label1.Location = new Point(95, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(150, 46);
+            label1.TabIndex = 14;
+            label1.Text = "Клиенти";
             // 
             // clientForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(940, 660);
+            Controls.Add(label1);
             Controls.Add(button10);
             Controls.Add(deleteServiceBtn);
             Controls.Add(newServiceBtn);
@@ -207,5 +222,6 @@
         private Button newServiceBtn;
         private Button deleteServiceBtn;
         private Button button10;
+        private Label label1;
     }
 }

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientCreatorForm));
             nameTB = new TextBox();
             lastNameTb = new TextBox();
             saveBtn = new Button();
             cancelBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // nameTB
@@ -68,21 +71,42 @@
             cancelBtn.UseVisualStyleBackColor = true;
             cancelBtn.Click += cancelBtn_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(59, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(111, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Име на клиент";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(59, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(144, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Презиме на клиент";
+            // 
             // clientCreatorForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(371, 242);
+            ClientSize = new Size(362, 225);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(cancelBtn);
             Controls.Add(saveBtn);
             Controls.Add(lastNameTb);
             Controls.Add(nameTB);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "clientCreatorForm";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "clientCreatorForm";
+            Text = "Креирај нов клиент";
             Load += clientCreatorForm_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -94,5 +118,7 @@
         private TextBox lastNameTb;
         private Button saveBtn;
         private Button cancelBtn;
+        private Label label1;
+        private Label label2;
     }
 }

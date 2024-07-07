@@ -73,5 +73,14 @@ namespace Invoice_System
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void printBtn_Click(object sender, EventArgs e)
+        {
+            if (createdService != null)
+            {
+                printLayoutForm printLayoutForm = new printLayoutForm(createdService);
+                printLayoutForm.ShowDialog();
+            }
+        }
     }
 }
