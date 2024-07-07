@@ -9,13 +9,20 @@ namespace Invoice_System
         public Form1()
         {
             InitializeComponent();
-            Stream stream = File.Open("MainData.dat", FileMode.Open);
+            Stream stream = File.Open("MainData.dat", FileMode.OpenOrCreate);
 #pragma warning disable SYSLIB0011 // Type or member is obsolete
             BinaryFormatter bf = new BinaryFormatter();
 #pragma warning restore SYSLIB0011 // Type or member is obsolete
+            if (stream.Length < 10)
+            {
+                customerList = new List<Customer>();
+            }
+            else
+            {
             customerList = (List<Customer>)bf.Deserialize(stream);
-            stream.Close();
+            }
             loadForm(new clientForm(customerList));
+            stream.Close();
         }
 
         public void loadForm(object form)
