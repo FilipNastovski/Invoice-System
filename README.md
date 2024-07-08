@@ -10,7 +10,7 @@
 
 ### Примери од корисничкиот интерфејс
 
-![Клиенти]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/Clients-Screenshot.png))
+![Клиенти]([Screenshots/Clients-Screenshot.png))
 ![Дешборд]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/Dashboard-Screenshot.png))
 ![Преглед на фактури]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/InvoiceViewer-Screenshot.png))
 ![Нов сервис]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/NewService-Screenshot.png))
