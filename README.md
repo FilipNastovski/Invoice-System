@@ -8,6 +8,16 @@
 - **Следење на плаќања:** Можност за следење на статусот на плаќањата.
 - **Управување со клиенти:** Едноставно управување со информации за клиентите.
 
+### Примери од корисничкиот интерфејс
+
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/Clients-Screenshot.png))
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/Dashboard-Screenshot.png))
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/InvoiceViewer-Screenshot.png))
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/NewService-Screenshot.png))
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/Services-Screenshot.png))
+![alt text]([http://url/to/img.png](https://github.com/FilipNastovski/Invoice-System/blob/5b8a3f7f584e702f2f5b54ab4f151350aa3b37ab/Screenshots/PrintedInvoice-Screenshot.png))
+
+
 ## 2. Објаснување на проблемот
 Многу мали бизниси имаат проблем со рачното управување со фактури и финансиски податоци. Ова е неефикасно и подложно на грешки. Традиционалното сметководство бара многу време и ресурси, што може да биде значителен товар за помалите бизниси. Апликацијата за фактурирање има за цел да ги реши овие проблеми преку автоматизација и дигитализација на процесите.
 
